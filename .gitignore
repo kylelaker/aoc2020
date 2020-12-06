@@ -1,0 +1,14 @@
+# Chalice
+.chalice/deployments/
+.chalice/deployed/
+.chalice/venv/
+
+# Python
+__pycache__/
+*.py[odc]
+
+# Pyenv
+.python-version
+
+# VS Code
+.vscode/
