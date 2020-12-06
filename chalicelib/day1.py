@@ -1,6 +1,5 @@
 from chalicelib.challenge import Challenge
 from typing import List
-from .challenge import Challenge
 
 
 class ReportRepair(Challenge):

@@ -1,6 +1,7 @@
 from chalice import Chalice, NotFoundError
 from chalice.app import BadRequestError
 from chalicelib.day1 import ReportRepair
+from chalicelib.day2 import PasswordPhilosophy
 
 app = Chalice(app_name='aoc2020')
 
@@ -10,6 +11,8 @@ def get_solver(day):
     # of the solver class.
     if int(day) == 1:
         return ReportRepair
+    if int(day) == 2:
+        return PasswordPhilosophy
     return NotImplemented
 
 
