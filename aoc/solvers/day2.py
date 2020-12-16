@@ -1,6 +1,5 @@
-from chalicelib.challenge import Challenge
+from aoc.challenge import ChallengeSolver
 from typing import List
-import abc
 
 
 class StoredPassword:
@@ -18,16 +17,11 @@ class StoredPassword:
         password = sections[2]
         return cls(num_1, num_2, char, password)
 
-
-def validate_sled(entry):
-    return entry.num_1 <= entry.password.count(entry.char) <= entry.num_2
-
-
-def validate_toboggan(entry):
-    return (entry.password[entry.num_1 - 1] == entry.char) != (entry.password[entry.num_2 - 1] == entry.char)
+    def is_valid(self, validator):
+        return validator(self)
 
 
-class PasswordPhilosophy(Challenge):
+class PasswordPhilosophy(ChallengeSolver):
 
     day = 2
     passwords: List[StoredPassword]
@@ -36,9 +30,16 @@ class PasswordPhilosophy(Challenge):
         lines = input.decode('utf-8').splitlines()
         self.passwords = [StoredPassword.from_line(line) for line in lines]
 
-
     def solve_a(self):
-        return sum(validate_sled(password) for password in self.passwords)
+        def validate_sled(entry):
+            return entry.num_1 <= entry.password.count(entry.char) <= entry.num_2
+
+        return sum(password.is_valid(validate_sled) for password in self.passwords)
 
     def solve_b(self):
-        return sum(validate_toboggan(password) for password in self.passwords)
+        def validate_toboggan(entry):
+            return (
+                entry.password[entry.num_1 - 1] == entry.char) != (entry.password[entry.num_2 - 1] == entry.char
+            )
+
+        return sum(password.is_valid(validate_toboggan) for password in self.passwords)

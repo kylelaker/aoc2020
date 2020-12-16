@@ -1,8 +1,8 @@
-from chalicelib.challenge import Challenge
+from aoc.challenge import ChallengeSolver
 from typing import List
 
 
-class ReportRepair(Challenge):
+class ReportRepair(ChallengeSolver):
 
     day = 1
     entries: List[int]
