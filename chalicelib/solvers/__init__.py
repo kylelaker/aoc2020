@@ -3,7 +3,7 @@ import inspect
 
 from pathlib import Path
 
-from aoc.challenge import ChallengeSolver
+from chalicelib.challenge import ChallengeSolver
 
 _SOLVERS = {}
 

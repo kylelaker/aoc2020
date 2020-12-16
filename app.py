@@ -1,5 +1,5 @@
 from chalice import Chalice, NotFoundError
-from aoc.solvers import get_solvers
+from chalicelib.solvers import get_solvers
 
 app = Chalice(app_name='aoc2020')
 

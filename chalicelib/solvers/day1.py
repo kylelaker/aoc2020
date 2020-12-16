@@ -1,4 +1,4 @@
-from aoc.challenge import ChallengeSolver
+from chalicelib.challenge import ChallengeSolver
 from typing import List
 
 
