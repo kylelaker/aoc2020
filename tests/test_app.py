@@ -3,7 +3,6 @@ from chalice.test import Client
 from app import app
 import pytest
 
-
 sample_test_data = [
     (1, 'a', 514579),
     (1, 'b', 241861950),
@@ -14,8 +13,7 @@ sample_test_data = [
     (4, 'a', 2),
     (4, 'b', 2),
     (5, 'a', 820),
-    # Day 5 does not provide sample answer for the 2nd challenge
-    # (5, 'b', None)
+    (5, 'b', -1),
     (6, 'a', 11),
     (6, 'b', 6),
     (7, 'a', 4),
@@ -27,7 +25,6 @@ sample_test_data = [
     (10, 'a', 220),
     (10, 'b', 19208),
 ]
-
 
 personal_test_data = [
     (1, 'a', 121396),
