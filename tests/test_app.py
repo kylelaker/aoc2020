@@ -13,7 +13,7 @@ sample_test_data = [
     (3, 'b', 336),
     (4, 'a', 2),
     (4, 'b', 2),
-    (5, 'a', 357),
+    (5, 'a', 820),
     # Day 5 does not provide sample answer for the 2nd challenge
     # (5, 'b', None)
     (6, 'a', 11),
