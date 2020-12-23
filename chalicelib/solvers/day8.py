@@ -52,7 +52,7 @@ class HandheldHalting(ChallengeSolver):
     day = 8
     boot_code: BootCode
 
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         lines = input.decode('utf-8').splitlines()
         instrs = []
         for line in lines:

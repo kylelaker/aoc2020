@@ -76,7 +76,7 @@ class PassportProcessing(ChallengeSolver):
 
     passports: List[Passport]
 
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         data = input.decode('utf-8').splitlines()
         self.passports = process_passports(data)
 

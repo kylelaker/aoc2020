@@ -26,7 +26,7 @@ class PasswordPhilosophy(ChallengeSolver):
     day = 2
     passwords: List[StoredPassword]
 
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         lines = input.decode('utf-8').splitlines()
         self.passwords = [StoredPassword.from_line(line) for line in lines]
 

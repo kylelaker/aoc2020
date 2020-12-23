@@ -57,7 +57,7 @@ class HandyHaversacks(ChallengeSolver):
     day = 7
     bags = List[Bag]
 
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         lines = input.decode('utf-8').splitlines()
         self.bags = [Bag.parse(line) for line in lines]
 

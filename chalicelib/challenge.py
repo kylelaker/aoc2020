@@ -13,7 +13,7 @@ class ChallengeSolver(abc.ABC):
     """
 
     @abc.abstractmethod
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         pass
 
     @abc.abstractproperty

@@ -29,7 +29,7 @@ def trees_on_slope(rows: Iterable[str], slope: Slope) -> int:
 class TobogganTrajectory(ChallengeSolver):
     day = 3
 
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         self.tree_rows = input.decode('utf-8').split()
     
     def solve_a(self):

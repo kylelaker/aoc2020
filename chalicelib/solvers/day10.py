@@ -17,7 +17,7 @@ class AdapterArray(ChallengeSolver):
     day = 10
     adapter_joltages: List[int]
     
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         lines = input.decode('utf-8').splitlines()
         nums = sorted(list(map(int, lines)))
         self.adapter_joltages = [0] + nums + [max(nums) + 3]

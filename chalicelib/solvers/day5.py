@@ -29,7 +29,7 @@ class BinaryBoarding(ChallengeSolver):
     day = 5
     seats: List[Seat]
 
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         lines = input.decode('utf-8').split()
         self.seats = [Seat.parse_str(line) for line in lines]
     

@@ -25,7 +25,7 @@ class EncodingError(ChallengeSolver):
     day = 9
     nums: List[int]
 
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         lines = input.decode('utf-8').split()
         self.nums = [int(num) for num in lines]
 

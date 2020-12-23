@@ -32,7 +32,7 @@ class CustomCustoms(ChallengeSolver):
     day = 6
     group_answers = List[str]
 
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         data = input.decode('utf-8').splitlines()
         self.group_answers = parse_groups(data)
     

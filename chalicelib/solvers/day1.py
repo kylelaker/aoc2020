@@ -7,7 +7,7 @@ class ReportRepair(ChallengeSolver):
     day = 1
     entries: List[int]
 
-    def __init__(self, input):
+    def __init__(self, input: bytes):
         lines = input.decode('utf-8').split()
         self.entries = [int(line) for line in lines]
 
