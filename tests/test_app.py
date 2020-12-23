@@ -22,9 +22,8 @@ sample_test_data = [
     (7, 'b', 32),
     (8, 'a', 5),
     (8, 'b', 8),
-    # The sample for Day 9 has different rules than the actual challenge
-    # (9, 'a', 127),
-    # (9, 'b', 62),
+    (9, 'a', 127),
+    (9, 'b', 62),
     (10, 'a', 220),
     (10, 'b', 19208),
 ]

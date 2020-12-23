@@ -24,15 +24,22 @@ class XmasValidator:
 class EncodingError(ChallengeSolver):
     day = 9
     nums: List[int]
+    _preamble_size: int = 25
 
     def __init__(self, input: bytes):
-        lines = input.decode('utf-8').split()
+        lines = input.decode('utf-8').splitlines()
+        # This is a custom extension to the format for Day 9 to support
+        # processing the given sample data, which uses a different
+        # preamble length.
+        if lines[0].startswith('#'):
+            self._preamble_size = int(lines[0][1:].strip())
+            lines = lines[1:]
         self.nums = [int(num) for num in lines]
 
     def solve_a(self):
-        validator = XmasValidator(self.nums[:25])
+        validator = XmasValidator(self.nums[:self._preamble_size])
         try:
-            for num in self.nums[25:]:
+            for num in self.nums[self._preamble_size:]:
                 validator.validate_next(num)
         except InvalidNumberError as answer:
             return answer.num
