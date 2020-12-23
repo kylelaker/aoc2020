@@ -19,7 +19,7 @@ def _load_solvers():
     print(directory)
     solvers = {}
     for file_path in directory.iterdir():
-        if file_path.stem == '__init__' or not file_path.suffix == '.py':
+        if file_path.stem == '__init__' or file_path.suffix != '.py':
             continue
         module_name = file_path.stem
         try:
